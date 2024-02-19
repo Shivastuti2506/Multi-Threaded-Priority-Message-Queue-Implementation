@@ -44,9 +44,9 @@ def test_message_passing():
         threads.append(thread)
 
     # Sending messages with varying priorities
-    message_sender.send_message(recipient_thread_id=1, message="High priority message", priority=1)
-    message_sender.send_message(recipient_thread_id=2, message="Low priority message", priority=2)
-    message_sender.send_message(recipient_thread_id=3, message="Medium priority message", priority=1)
+    message_sender.send_message(recipient_thread_id=1, message="first priority message", priority=1)
+    message_sender.send_message(recipient_thread_id=2, message="third priority message", priority=3)
+    message_sender.send_message(recipient_thread_id=3, message="second priority message", priority=2)
 
     # Wait for threads to finish
     for thread in threads:
