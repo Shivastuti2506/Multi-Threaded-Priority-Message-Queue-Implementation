@@ -28,11 +28,21 @@ This project implements a multi-threaded priority message queue system in Python
 8. **Program Termination**:
    - The program concludes once all threads have finished their tasks and terminated, releasing resources and exiting gracefully.
 
-## Usage
+## Usage by cloning the repository
 1. Clone the repository to your local machine.
 2. Ensure you have Python 3.6 or higher installed.
 3. Run the `main.py` file:
    ```bash
    python main.py
 
+## Usage without cloning the repository
+1. you just need to type vscode.dev in the above url .
+    ```bash
+    https://vscode.dev/github.com/Shivastuti2506/Multi-Threaded-Priority-Message-Queue-Implementation/edit/main/README.md
+2. After that, it just asks for some permission for vs code to open, allow the permissions.
+3. open the vscode local terminal.
+4. Run the `main.py` file:
+   ```bash
+   python main.py
+   
 
