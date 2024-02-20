@@ -5,22 +5,22 @@ from thread_with_priority import ThreadWithPriority
 import time
 
 def main():
-    # Testing for PriorityMessageQueue
+    # Test the PriorityMessageQueue
     test_priority_message_queue()
 
-    # Testing for message passing system
+    # Test the message passing system
     test_message_passing()
 
 def test_priority_message_queue():
     print("Testing PriorityMessageQueue:")
     message_queue = PriorityMessageQueue()
 
-    # Enqueue messages with priorities
+    # Enqueue some messages with varying priorities
     message_queue.enqueue_message("Message 1", priority=1)
     message_queue.enqueue_message("Message 2", priority=3)
     message_queue.enqueue_message("Message 3", priority=2)
 
-    # Peek at the highest priority message 
+    # Peek at the highest priority message without removing it
     peeked_message = message_queue.peek_message()
     print("Peeked message:", peeked_message)
 
@@ -44,9 +44,9 @@ def test_message_passing():
         threads.append(thread)
 
     # Sending messages with varying priorities
-    message_sender.send_message(recipient_thread_id=1, message="first priority message", priority=1)
-    message_sender.send_message(recipient_thread_id=2, message="third priority message", priority=3)
-    message_sender.send_message(recipient_thread_id=3, message="second priority message", priority=2)
+    message_sender.send_message(recipient_thread_id=1, message="High priority message", priority=1)
+    message_sender.send_message(recipient_thread_id=2, message="Low priority message", priority=3)
+    message_sender.send_message(recipient_thread_id=3, message="Medium priority message", priority=2)
 
     # Wait for threads to finish
     for thread in threads:
@@ -54,4 +54,3 @@ def test_message_passing():
 
 if __name__ == "__main__":
     main()
-
